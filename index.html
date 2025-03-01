@@ -22,36 +22,82 @@
     <!-- font css link -->
     <link rel="stylesheet" href="fontStyle.css" />
   </head>
-  <body class="poppins-regular">
+  <body class="poppins-regular container mx-auto">
     <!-- Navbar -->
-    <header class="container mx-auto">
-      <nav class="">
-        <div
-          class="navbar bg-white rounded-2xl shadow-sm mt-8 flex justify-between"
-        >
-          <div class="navbar-center">
-            <a class="cursor-pointer text-3xl text-[#00303C]"
-              >Dev <span class="poppins-bold">Board</span></a
-            >
-          </div>
-          <div class="navbar-end">
-            <button
-              class="text-lg font-bold text-[#00303C] cursor-pointer mr-12"
-            >
-              <div
-                class="flex items-center gap-2 bg-slate-100 p-2 rounded-full cursor-pointer"
-              >
-                <img src="./assets/checkbox.png" alt="" />
-                <h2 class="font-bold text-2xl">32</h2>
-              </div>
-            </button>
-            <button class="btn btn-ghost btn-circle">
-              <img src="./assets/theme-btn.png" alt="" />
-            </button>
-          </div>
+
+    <nav class="">
+      <div
+        class="navbar bg-white rounded-2xl shadow-sm mt-8 flex justify-between"
+      >
+        <div class="navbar-center">
+          <a class="cursor-pointer text-3xl text-[#00303C]"
+            >Dev <span class="poppins-bold">Board</span></a
+          >
         </div>
-      </nav>
-    </header>
+        <div class="navbar-end">
+          <button class="text-lg font-bold text-[#00303C] cursor-pointer mr-12">
+            <div
+              class="flex items-center gap-2 bg-slate-100 p-2 rounded-full cursor-pointer"
+            >
+              <img src="./assets/checkbox.png" alt="" />
+              <h2 class="font-bold text-2xl">32</h2>
+            </div>
+          </button>
+          <button class="btn btn-ghost btn-circle">
+            <img src="./assets/theme-btn.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main board section  -->
+    <main
+      class="grid grid-cols-4 gap-2 mt-8 mb-12 bg-white rounded-2xl shadow-sm p-4"
+    >
+      <div class="col-span-3">
+        <header class="grid grid-cols-4 gap-5">
+          <div class="card bg-base-100 shadow-sm py-8 bg-[#F4F7FF]">
+            <div class="flex justify-center items-center gap-2">
+              <div>
+                <img src="./assets/checkbox.png" width="32" alt="" />
+              </div>
+              <div>
+                <h2 class="poppins-normal text-lg">Task Assigned </h2>
+                <h3 class="font-bold text-2xl">05</h3>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-span-2 card bg-base-100 shadow-sm py-8 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] text-white"
+          >
+            <div class="flex justify-center items-center gap-2">
+              <div>
+                <img src="./assets/board.png" width="" alt="" />
+              </div>
+              <div>
+                <h2 class="poppins-normal text-2xl text-white">
+                  Discover Something <br />
+                  New Today! 
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow-sm py-8 bg-[#F4F7FF]">
+            <div class="flex justify-center items-center gap-2">
+              <div>
+                <img src="./assets/calender.png" width="32" alt="" />
+              </div>
+              <div>
+                <h2 class="poppins-normal text-lg">Task Assigned </h2>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="col-span-1">
+        <h2>Sidebar</h2>
+      </div>
+    </main>
 
     <!-- Script Link -->
     <script src="./js/script.js" defer></script>
