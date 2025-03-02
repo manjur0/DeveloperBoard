@@ -1,31 +1,3 @@
-// function getCustomBDDate() {
-//   let now = new Date();
-//   let bdTime = new Intl.DateTimeFormat("en-GB", {
-//     timeZone: "Asia/Dhaka",
-//   }).format(now);
-//   document.getElementById("bd-date").textContent = bdTime;
-// }
-
-// const nowDate = getCustomBDDate();
-// const dateAndTimeElement = document.getElementById("dateAndTime");
-// dateAndTimeElement.textContent = nowDate;
-
-// const completeButtons = document.getElementsByClassName("btn-primary");
-// const cardTitle = document.querySelector(".card-title");
-
-// const createPara = document.createElement("p");
-// const addCompletedTasks = document.getElementsByClassName("add-complited-task");
-// for (let i = 0; i < completeButtons.length; i++) {
-//   const button = completeButtons[i];
-//   button.addEventListener("click", function () {
-//     const titleText = cardTitle.innerText;
-//     createPara.textContent = `You have Complete The Task ${titleText}`;
-//     const newItems = (createPara.textContent = titleText);
-//     button.setAttribute("disabled", "true");
-//     addCompletedTasks.appendChild(newItems);
-//   });
-// }
-
 const taskCount = document.getElementById("taskCount");
 const totalTaskCount = document.getElementById("totalTaskCount");
 
@@ -70,8 +42,23 @@ for (let i = 0; i < completeButtons.length; i++) {
 
     clearHistory.addEventListener("click", function () {
       addCompletedTasks.innerHTML = "";
-      taskCount.textContent = "06";
-      totalTaskCount.textContent = 30;
+      
     });
   });
 }
+
+// background change functionality
+function getRandomColor() {
+  let letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+const change_Theme = document.getElementById("change-Theme");
+
+document.getElementById("theme-btn").addEventListener("click", function () {
+  change_Theme.style.background = getRandomColor();
+});
