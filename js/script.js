@@ -42,7 +42,11 @@ for (let i = 0; i < completeButtons.length; i++) {
 
     clearHistory.addEventListener("click", function () {
       addCompletedTasks.innerHTML = "";
-      
+      if (clearHistory) {
+        button.removeAttribute("disabled");
+        taskCount.textContent = "06";
+        totalTaskCount.textContent = 30;
+      }
     });
   });
 }
