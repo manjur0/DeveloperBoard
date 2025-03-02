@@ -20,7 +20,9 @@ const options = {
   hour12: true,
 };
 
-dateAndTime.textContent = new Date().toLocaleDateString("en-US", options);
+if (dateAndTime) {
+  dateAndTime.textContent = new Date().toLocaleDateString("en-US", options);
+}
 
 // main functionality
 for (let i = 0; i < completeButtons.length; i++) {
@@ -75,16 +77,25 @@ function getRandomColor() {
 
 const change_Theme = document.getElementById("change-Theme");
 
-document.getElementById("theme-btn").addEventListener("click", function () {
-  change_Theme.style.background = getRandomColor();
-});
+const themeBtn = document.getElementById("theme-btn");
+if (themeBtn) {
+  themeBtn.addEventListener("click", function () {
+    change_Theme.style.background = getRandomColor();
+  });
+}
 
 //blog page
-blogsPage.addEventListener("click", function () {
-  location.href = "blogs.html";
-});
+if (blogsPage) {
+  blogsPage.addEventListener("click", function () {
+    location.href = "blogs.html";
+  });
+}
 
 // back to home
-backToHome.addEventListener("click", function () {
-  location.href = "index.html";
-});
+if (backToHome) {
+  backToHome.addEventListener("click", function () {
+    location.href = "index.html";
+  });
+}
+
+console.log("Hello World");
