@@ -1,10 +1,28 @@
 const taskCount = document.getElementById("taskCount");
 const totalTaskCount = document.getElementById("totalTaskCount");
 
+const dateAndTime = document.getElementById("dateAndTime");
+
 // complte button fucntionality
 const completeButtons = document.getElementsByClassName("btn-primary");
 const clearHistory = document.getElementById("clear-history");
 
+// date and time function
+
+const options = {
+  timeZone: "Asia/Dhaka",
+  year: "numeric",
+  month: "long",
+  weekday: "long",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  hour12: true,
+};
+
+dateAndTime.textContent = new Date().toLocaleDateString("en-US", options);
+
+// main functionality
 for (let i = 0; i < completeButtons.length; i++) {
   const button = completeButtons[i];
 
@@ -13,15 +31,7 @@ for (let i = 0; i < completeButtons.length; i++) {
     const cardTitle = card.querySelector(".card-title");
 
     if (!cardTitle) return;
-    const options = {
-      timeZone: "Asia/Dhaka",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-      hour12: true,
-    };
+
     const bdDate = new Date().toLocaleDateString("en-US", options);
 
     const createPara = document.createElement("p");
