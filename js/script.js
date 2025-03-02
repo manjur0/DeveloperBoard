@@ -8,7 +8,6 @@ const completeButtons = document.getElementsByClassName("btn-primary");
 const clearHistory = document.getElementById("clear-history");
 
 // date and time function
-
 const options = {
   timeZone: "Asia/Dhaka",
   year: "numeric",
@@ -43,6 +42,8 @@ for (let i = 0; i < completeButtons.length; i++) {
 
     const addCompletedTasks = document.querySelector(".add-complited-task");
     if (addCompletedTasks) {
+      alert("Do you have complete this task? ");
+
       addCompletedTasks.appendChild(createPara);
       taskCount.textContent = parseInt(taskCount.textContent) - 1;
       totalTaskCount.textContent = parseInt(totalTaskCount.textContent) + 1;
