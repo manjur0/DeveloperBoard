@@ -31,6 +31,7 @@ const totalTaskCount = document.getElementById("totalTaskCount");
 
 // complte button fucntionality
 const completeButtons = document.getElementsByClassName("btn-primary");
+const clearHistory = document.getElementById("clear-history");
 
 for (let i = 0; i < completeButtons.length; i++) {
   const button = completeButtons[i];
@@ -63,13 +64,14 @@ for (let i = 0; i < completeButtons.length; i++) {
       addCompletedTasks.appendChild(createPara);
       taskCount.textContent = parseInt(taskCount.textContent) - 1;
       totalTaskCount.textContent = parseInt(totalTaskCount.textContent) + 1;
-    } else {
     }
 
     button.setAttribute("disabled", "true");
+
+    clearHistory.addEventListener("click", function () {
+      addCompletedTasks.innerHTML = "";
+      taskCount.textContent = "06";
+      totalTaskCount.textContent = 30;
+    });
   });
 }
-
-// history button functionality
-const clearHistory = document.getElementById("clear-history");
-clearHistory.addEventListener("click", function () {});
