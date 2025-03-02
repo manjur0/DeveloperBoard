@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  id="change-Theme"
+  class="bg-gradient-to-b from-[#F4F7FF] to-[#F4F7FF]"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Board</title>
+    <!-- Tailwind css and daisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font css link -->
+    <link rel="stylesheet" href="fontStyle.css" />
+  </head>
+  <body class="poppins-regular container mx-auto">
+    <nav class="">
+      <div
+        class="navbar bg-white rounded-2xl shadow-sm mt-8 flex justify-between"
+      >
+        <div class="navbar-center">
+          <img src="/assets/logo.png" width="38" height="38" alt="" />
+          <a class="cursor-pointer text-3xl text-[#00303C]"
+            >Dev <span class="poppins-bold">Board</span></a
+          >
+        </div>
+        <div class="navbar-end">
+          <button class="text-lg font-bold text-[#00303C] cursor-pointer mr-12">
+            <div
+              class="flex items-center gap-2 bg-slate-100 p-2 rounded-full cursor-pointer"
+            >
+              <img src="./assets/checkbox.png" alt="" />
+              <h2 id="totalTaskCount" class="font-bold text-2xl">30</h2>
+            </div>
+          </button>
+          <button id="backToHome" class="btn bg-blue-600 text-white">
+            Back to Home
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="my-20">
+      <div class="collapse bg-base-100 border border-base-300 my-6">
+        <input type="radio" name="my-accordion-1" checked="checked" />
+
+        <div class="collapse-title font-extrabold">
+          Different Ways to Select an Element in the DOM
+        </div>
+        <div class="collapse-content text-lg font-medium">
+          document.getElementById("id") → Selects an element by its id.
+          <br />
+          document.getElementsByClassName("class") → Selects elements by their
+          class.
+          <br />
+          document.getElementsByTagName("tag") → Selects elements by their tag
+          name. <br />
+          document.querySelector("selector") → Selects the first matching
+          element using CSS selectors. <br />
+          document.querySelectorAll("selector") → Selects all matching elements
+          using CSS selectors.
+        </div>
+      </div>
+
+      <div class="collapse bg-base-100 border border-base-300 my-6">
+        <input type="radio" name="my-accordion-1" />
+
+        <div class="collapse-title font-extrabold">
+          Difference between innerHTML, innerText, and textContent
+        </div>
+        <div class="collapse-content text-lg font-medium">
+          (1) innerHTML Returns or sets the HTML content inside an element,
+          including HTML tags. <br />
+          (2) innerText Returns or sets only the visible text, ignoring hidden
+          elements. <br />
+          (3) textContent Returns or sets the entire text content, including
+          hidden elements.
+        </div>
+      </div>
+      <div class="collapse bg-base-100 border border-base-300 my-6">
+        <input type="radio" name="my-accordion-1" />
+
+        <div class="collapse-title font-extrabold">
+          What is Event Delegation in the DOM?
+        </div>
+        <div class="collapse-content text-lg font-medium">
+          Event delegation is a technique where a parent element handles events
+          for its child elements, even if they are added dynamically. Instead of
+          adding event listeners to each child element, we add a single event
+          listener to the parent.
+        </div>
+      </div>
+
+      <div class="collapse bg-base-100 border border-base-300 my-6">
+        <input type="radio" name="my-accordion-1"  />
+
+        <div class="collapse-title font-extrabold">
+          What is Event Bubbling in the DOM?
+        </div>
+        <div class="collapse-content text-lg font-medium">
+          Event bubbling means that when an event occurs on a child element, it
+          first triggers on that element and then propagates upwards to its
+          parent elements.
+        </div>
+      </div>
+    </div>
+
+    <!-- script link -->
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 const taskCount = document.getElementById("taskCount");
 const totalTaskCount = document.getElementById("totalTaskCount");
-
+const blogsPage = document.getElementById("blogs-page");
+const backToHome = document.getElementById("backToHome");
 const dateAndTime = document.getElementById("dateAndTime");
 
 // complte button fucntionality
@@ -76,4 +77,14 @@ const change_Theme = document.getElementById("change-Theme");
 
 document.getElementById("theme-btn").addEventListener("click", function () {
   change_Theme.style.background = getRandomColor();
+});
+
+//blog page
+blogsPage.addEventListener("click", function () {
+  location.href = "blogs.html";
+});
+
+// back to home
+backToHome.addEventListener("click", function () {
+  location.href = "index.html";
 });
